@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="languages">
+        <item>Hindi</item>
+        <item>English</item>
+        <item>Russian</item>
+    </string-array>
+</resources>

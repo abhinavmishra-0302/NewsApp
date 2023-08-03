@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/frag_main">
+
+    <fragment
+        android:id="@+id/frag_main"
+        android:name="com.example.newsapp.Frag_main"
+        android:label="fragment_frag_main"
+        tools:layout="@layout/fragment_frag_main" >
+        <action
+            android:id="@+id/action_frag_main_to_worldNews"
+            app:destination="@id/newsFrag" />
+        <action
+            android:id="@+id/action_frag_main_to_finance"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFrag"
+        android:name="com.example.newsapp.NewsFrag"
+        android:label="fragment_world_news"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_worldNews_to_frag_main"
+            app:destination="@id/frag_main" />
+        <action
+            android:id="@+id/action_worldNews_to_finance"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.newsapp.Settings"
+        android:label="fragment_finance"
+        tools:layout="@layout/fragment_finance" >
+        <action
+            android:id="@+id/action_finance_to_frag_main"
+            app:destination="@id/frag_main" />
+        <action
+            android:id="@+id/action_finance_to_worldNews"
+            app:destination="@id/newsFrag" />
+    </fragment>
+</navigation>
